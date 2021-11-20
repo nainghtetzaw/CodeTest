@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CodeTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="popular">Popular</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_genres">Movie Genres</string>
+    <string name="plot_summary">Plot Summary</string>
+    <string name="summary">This will be a long paragraph.</string>
+    <string name="casts">Casts</string>
+</resources>

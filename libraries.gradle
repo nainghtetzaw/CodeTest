@@ -1,0 +1,120 @@
+ext {
+    appId = "com.codigo.codetest"
+    minSdkVersion = 21 //Android 5.0
+    compileSdkVersion = 31 //Android 11.0
+    buildToolVersion = "28.0.0"
+
+    lottieVersion = "3.4.2"
+
+    //Android
+    androidXSupportVersion = "1.0.0"
+    androidXConstraintlayoutVersion = "2.1.2"
+    roomVersion = "2.3.0"
+    lifecycleVersion = "2.0.0"
+    liveDataReactiveStreamsVersion = "2.0.0"
+    androidXEspressoVersion = "3.1.1"
+    glideVersion = "4.12.0"
+    coilVersion = "1.3.2"
+    kotlinVersion = "1.5.20"
+    kotlinReflectionVersion = "1.5.31"
+    glideTransformationVersion = "4.0.1"
+    architectureComponentsVersion = "2.0.0"
+    livedataExtensions = "1.3.0"
+
+    //Testing
+    junitVersion = "4.12"
+    androidXSupportTestVersion = "1.1.0"
+    androidXMultiDex = "1.0.3"
+
+    // Retrofit + Rxjava2
+    gsonVersion = "2.8.5"
+    okhttpVersion = "3.9.1"
+    rxAndroidVersion = "2.1.0"
+    retrofitVersion = "2.3.0"
+    retrofitRxJavaVersion = "1.0.0"
+    rxJavaVersion = "2.2.4"
+
+    circularImageViewVersion = "3.0.0"
+
+    pinViewVersion = "1.4.3"
+
+    //Page Indicator Version
+    pageIndicator = "1.0.0"
+
+    //Pager Indicator Version
+    pagerIndicator = "1.0.3"
+
+    // RecyclerViewPager Indicator Version
+    recyclerPagerIndicatorVersion = '1.0.10'
+
+    //Jetpack navigation
+    nav_version = "2.3.5"
+
+    //Coil
+    coil_version = "1.3.2"
+
+    //Flowbinding
+    flowbinding_version = "1.2.0"
+
+
+    libraries = [
+            kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            kotlinReflection        : "org.jetbrains.kotlin:kotlin-reflect:${kotlinReflectionVersion}",
+            appCompat               : "androidx.appcompat:appcompat:${androidXSupportVersion}",
+            designSupport           : "com.google.android.material:material:1.2.0-alpha01",
+            vectorSupport           : "androidx.vectordrawable:vectordrawable:${androidXSupportVersion}",
+            cardView                : "androidx.cardview:cardview:${androidXSupportVersion}",
+            recyclerView            : "androidx.recyclerview:recyclerview:${androidXSupportVersion}",
+            gridlayout              : "androidx.gridlayout:gridlayout:${androidXSupportVersion}",
+            constraintLayout        : "androidx.constraintlayout:constraintlayout:${androidXConstraintlayoutVersion}",
+            lifecycleExtensions     : "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+            livedataExtensions      : "com.snakydesign.livedataextensions:lives:${livedataExtensions}",
+            liveDataReactiveStreams : "androidx.lifecycle:lifecycle-reactivestreams:$lifecycleVersion",
+            okhttp                  : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+            okhttpLogging           : "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}",
+            rxAndroid               : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxJava                  : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitConverter       : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitAdapter         : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+            retrofitRxAdapter       : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitRxJavaVersion}",
+            glide                   : "com.github.bumptech.glide:glide:${glideVersion}",
+            glideTransformation     : "jp.wasabeef:glide-transformations:${glideTransformationVersion}",
+            coil                    : "io.coil-kt:coil:${coilVersion}",
+            roomRuntime             : "androidx.room:room-runtime:${roomVersion}",
+            roomKtx                 : "androidx.room:room-ktx:${roomVersion}",
+            roomRxjava2             : "androidx.room:room-rxjava2:${roomVersion}",
+            gson                    : "com.google.code.gson:gson:${gsonVersion}",
+            multiDex                : "androidx.multidex:multidex:${androidXMultiDex}",
+            circularImageView       : "de.hdodenhof:circleimageview:${circularImageViewVersion}",
+            "architectureComponents": "androidx.lifecycle:lifecycle-extensions:${architectureComponentsVersion}",
+            "pinView"               : "com.chaos.view:pinview:${pinViewVersion}",
+            "accountKit"            : "com.facebook.android:account-kit-sdk:5.+",
+            "pageIndicator"         : "com.afollestad:viewpagerdots:${pageIndicator}",
+            "pagerIndicator"        : "com.romandanylyk:pageindicatorview:${pagerIndicator}",
+            "recyclerPagerIndicator": "com.ryanjeffreybrooks:indefinitepagerindicator:${recyclerPagerIndicatorVersion}",
+            lottieAnimation         : "com.airbnb.android:lottie:$lottieVersion",
+            dynamicFeaturesNav      : "androidx.navigation:navigation-dynamic-features-fragment:${nav_version}",
+            navigationFragment      : "androidx.navigation:navigation-fragment-ktx:${nav_version}",
+            navigationUi            : "androidx.navigation:navigation-ui-ktx:${nav_version}",
+            coil                    : "io.coil-kt:coil:${coil_version}",
+            flowBindingAndroid      : "io.github.reactivecircus.flowbinding:flowbinding-android:${flowbinding_version}",
+            flowBindingMaterial     : "io.github.reactivecircus.flowbinding:flowbinding-material:${flowbinding_version}"
+    ]
+
+    aptLibraries = [
+            glideCompiler    : "com.github.bumptech.glide:compiler:${glideVersion}",
+            lifeCycleCompiler: "androidx.lifecycle:lifecycle-compiler:${lifecycleVersion}",
+            roomCompiler     : "androidx.room:room-compiler:${roomVersion}",
+    ]
+
+    testLibraries = [
+            junit             : "junit:junit:${junitVersion}",
+            supportAnnotations: "androidx.annotation:annotation:${androidXSupportVersion}",
+            supportTestRunner : "androidx.test:runner:${androidXSupportTestVersion}",
+            supportTestRules  : "androidx.test:rules:${androidXSupportTestVersion}",
+            espresso          : "com.android.support.test.espresso:espresso-core:${androidXEspressoVersion}",
+            espressoContrib   : "com.android.support.test.espresso:espresso-contrib:${androidXEspressoVersion}",
+            jetpackNavigation : "androidx.navigation:navigation-testing:${nav_version}"
+    ]
+}

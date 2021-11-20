@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Icon Sizes -->
+    <dimen name="icon_medium">50dp</dimen>
+    <dimen name="icon_small">32dp</dimen>
+
+    <!-- Margins -->
+    <dimen name="margin_small_1x">10dp</dimen>
+    <dimen name="margin_small_2x">8dp</dimen>
+    <dimen name="margin_small_3x">6dp</dimen>
+    <dimen name="margin_small_4x">4dp</dimen>
+    <dimen name="margin_medium_1x">12dp</dimen>
+    <dimen name="margin_medium_2x">14dp</dimen>
+    <dimen name="margin_medium_3x">16dp</dimen>
+    <dimen name="margin_medium_4x">18dp</dimen>
+    <dimen name="margin_large_1x">20dp</dimen>
+    <dimen name="margin_large_2x">22dp</dimen>
+    <dimen name="margin_large_3x">24dp</dimen>
+    <dimen name="margin_large_4x">26dp</dimen>
+    <dimen name="margin_large_5x">28dp</dimen>
+    <dimen name="margin_x_huge">32dp</dimen>
+    <dimen name="margin_xx_huge">48dp</dimen>
+    <dimen name="margin_xxx_huge">56dp</dimen>
+
+    <dimen name="margin_small_1x_n">-10dp</dimen>
+    <dimen name="margin_small_2x_n">-8dp</dimen>
+    <dimen name="margin_small_3x_n">-6dp</dimen>
+    <dimen name="margin_small_4x_n">-4dp</dimen>
+    <dimen name="margin_medium_1x_n">-12dp</dimen>
+    <dimen name="margin_medium_2x_n">-14dp</dimen>
+    <dimen name="margin_medium_3x_n">-16dp</dimen>
+    <dimen name="margin_medium_4x_n">-18dp</dimen>
+    <dimen name="margin_large_1x_n">-20dp</dimen>
+    <dimen name="margin_large_2x_n">-22dp</dimen>
+    <dimen name="margin_large_3x_n">-24dp</dimen>
+    <dimen name="margin_large_4x_n">-26dp</dimen>
+    <dimen name="margin_large_5x_n">-28dp</dimen>
+    <dimen name="margin_x_huge_n">-32dp</dimen>
+    <dimen name="margin_xx_huge_n">-48dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_small_1x">10sp</dimen>
+    <dimen name="text_size_medium_1x">12sp</dimen>
+    <dimen name="text_size_medium_2x">14sp</dimen>
+    <dimen name="text_size_medium_3x">16sp</dimen>
+    <dimen name="text_size_medium_4x">18sp</dimen>
+    <dimen name="text_size_large_1x">20sp</dimen>
+    <dimen name="text_size_large_2x">22sp</dimen>
+    <dimen name="text_size_large_3x">24sp</dimen>
+    <dimen name="text_size_large_4x">26sp</dimen>
+    <dimen name="text_size_large_5x">28sp</dimen>
+    <dimen name="text_size_x_huge">32sp</dimen>
+    <dimen name="text_size_xx_huge">48sp</dimen>
+    <dimen name="text_size_xxx_huge">56sp</dimen>
+    <dimen name="dimen_250">250dp</dimen>
+</resources>
