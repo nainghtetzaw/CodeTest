@@ -1,11 +1,11 @@
 package com.codigo.codetest.ui.screens
 
 data class MovieViewObject(
-    val id : Int,
-    val imageUrl : String,
-    val title : String,
-    val overview : String,
-    val isFavMovie : Boolean,
+    var id : Int,
+    var imageUrl : String,
+    var title : String,
+    var overview : String,
+    var isFavMovie : Boolean,
     val genres : List<String> = emptyList()
 )
 

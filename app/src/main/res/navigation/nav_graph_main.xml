@@ -22,6 +22,9 @@
         <argument
             android:name="movieId"
             app:argType="integer"/>
+        <argument
+            android:name="isFav"
+            app:argType="boolean"/>
 
     </fragment>
 </navigation>

@@ -2,6 +2,7 @@ package com.codigo.codetest.hilt
 
 import com.codigo.codetest.data.sources.local.LocalMovieDataSource
 import com.codigo.codetest.data.sources.remote.ApiService
+import com.codigo.codetest.data.sources.remote.RemoteMovieDataSource
 import com.codigo.codetest.repositories.MovieRepository
 import com.codigo.codetest.repositories.MovieRepositoryImpl
 import dagger.Module
@@ -18,7 +19,7 @@ object RepositoryModule {
     @Provides
     fun provideMovieRepository(
         localDataSource : LocalMovieDataSource,
-        remoteMovieDataSource: ApiService
+        remoteMovieDataSource: RemoteMovieDataSource
     ) : MovieRepository = MovieRepositoryImpl(localDataSource, remoteMovieDataSource)
 
 }

@@ -54,7 +54,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvUpcoming"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:clipToPadding="false"
                     android:overScrollMode="never"
                     android:layout_marginTop="@dimen/margin_large_1x"
@@ -80,7 +80,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvPopular"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:clipToPadding="false"
                     android:overScrollMode="never"
                     android:layout_marginTop="@dimen/margin_large_1x"

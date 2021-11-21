@@ -7,27 +7,22 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.codigo.codetest.data.models.entities.*
 import com.codigo.codetest.data.sources.local.room.daos.BelongsToTypeDao
-import com.codigo.codetest.data.sources.local.room.daos.CastDataResponseDao
 import com.codigo.codetest.data.sources.local.room.daos.GenreDao
 import com.codigo.codetest.data.sources.local.room.daos.MovieDao
-import com.codigo.codetest.data.sources.local.room.typeConverters.CastListTypeConverter
 import com.codigo.codetest.data.sources.local.room.typeConverters.GenreListTypeConverter
 import com.codigo.codetest.data.sources.local.room.typeConverters.IntListTypeConverter
 import com.codigo.codetest.data.sources.local.room.typeConverters.MovieListTypeConverter
 
 @Database(
-    version = 0,
+    version = 3,
     entities = [
         BelongsToTypeEntity::class,
         MovieEntity::class,
-        GenreEntity::class,
-        CastDataResponseEntity::class,
-        CastEntity::class
+        GenreEntity::class
     ]
 )
 @TypeConverters(
     MovieListTypeConverter::class,
-    CastListTypeConverter::class,
     GenreListTypeConverter::class,
     IntListTypeConverter::class
 )
@@ -60,6 +55,5 @@ abstract class CodeTestDatabase : RoomDatabase() {
 
     abstract fun movieDao() : MovieDao
     abstract fun belongsToTypeDao() : BelongsToTypeDao
-    abstract fun castResponseDao() : CastDataResponseDao
     abstract fun genreDao() : GenreDao
 }

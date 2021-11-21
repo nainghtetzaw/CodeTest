@@ -2,7 +2,6 @@ package com.codigo.codetest.hilt
 
 import android.content.Context
 import com.codigo.codetest.data.sources.local.room.daos.BelongsToTypeDao
-import com.codigo.codetest.data.sources.local.room.daos.CastDataResponseDao
 import com.codigo.codetest.data.sources.local.room.daos.GenreDao
 import com.codigo.codetest.data.sources.local.room.daos.MovieDao
 import com.codigo.codetest.data.sources.local.room.CodeTestDatabase
@@ -28,10 +27,6 @@ object RoomDataModule {
     @Singleton
     @Provides
     fun provideGenreDao(database: CodeTestDatabase) : GenreDao = database.genreDao()
-
-    @Singleton
-    @Provides
-    fun provideCastResponseDao(database: CodeTestDatabase) : CastDataResponseDao = database.castResponseDao()
 
     @Provides
     fun provideDatabase(@ApplicationContext context : Context) : CodeTestDatabase = CodeTestDatabase.getInstance(context)

@@ -15,6 +15,6 @@ interface BelongsToTypeDao {
     suspend fun insertMoviesWithType(type : BelongsToTypeEntity)
 
     @Query("SELECT * FROM BelongsToType WHERE type == :type")
-    fun getMoviesByType(type : String) : Flow<BelongsToTypeEntity>
+    fun getMoviesByType(type : String) : Flow<BelongsToTypeEntity?>
 
 }

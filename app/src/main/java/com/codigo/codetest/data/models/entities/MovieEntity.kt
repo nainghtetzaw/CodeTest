@@ -25,20 +25,8 @@ data class MovieEntity(
     var genreIds : List<Int> = listOf(),
 
     @SerializedName("genres")
-    var genres : List<GenreEntity> = listOf(),
+    var genres : List<GenreEntity>? = listOf(),
 
     @SerializedName("is_Fav_Movie")
     var isFavMovie : Boolean = false
-)
-
-data class WholeMovieEntity(
-    @Embedded
-    var movie : MovieEntity,
-
-    @Relation(
-        parentColumn = "id",
-        entityColumn = "id",
-        entity = CastDataResponseEntity::class
-    )
-    var casts : CastDataResponseEntity?,
 )

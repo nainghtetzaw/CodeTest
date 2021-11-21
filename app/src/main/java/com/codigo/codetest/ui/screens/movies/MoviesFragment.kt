@@ -11,9 +11,13 @@ import com.codigo.codetest.databinding.FragmentMoviesBinding
 import com.codigo.codetest.baseClasses.BaseFragment
 import com.codigo.codetest.ui.recyclerview.movies.MovieDelegate
 import com.codigo.codetest.ui.recyclerview.movies.MoviesAdapter
+import com.codigo.codetest.ui.screens.MovieViewObject
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_movies.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @AndroidEntryPoint
+@ExperimentalCoroutinesApi
 class MoviesFragment : BaseFragment<MoviesViewModel>(), MovieDelegate {
 
     override val viewModel: MoviesViewModel by viewModels()
@@ -40,19 +44,26 @@ class MoviesFragment : BaseFragment<MoviesViewModel>(), MovieDelegate {
     override fun setupUi() {
         setUpRecyclerViews()
         setUpObservers()
+        viewModel.fetchPopularMovies()
+        viewModel.fetchUpcomingMovies()
     }
 
     override fun setupListeners() {
-
+        binding.swipeRefresh.setOnRefreshListener {
+            viewModel.fetchPopularMovies()
+            viewModel.fetchUpcomingMovies()
+        }
     }
 
-    override fun onTapMovie(movieId: Int) {
+    override fun onTapMovie(movieId: Int, isFav : Boolean) {
         viewModel.isFragmentFinished = true
-        findNavController().navigate(MoviesFragmentDirections.actionMoviesFragmentToMovieDetailFragment(movieId))
+        findNavController().navigate(MoviesFragmentDirections.actionMoviesFragmentToMovieDetailFragment(movieId, isFav))
     }
 
-    override fun onTapFav(movieId: Int, isFavMovie: Boolean) {
-
+    override fun onTapFav(movie : MovieViewObject) {
+        viewModel.addMovieToFav(movie)
+//        viewModel.fetchUpcomingMovies()
+//        viewModel.fetchPopularMovies()
     }
 
     private fun setUpRecyclerViews() {
@@ -67,13 +78,14 @@ class MoviesFragment : BaseFragment<MoviesViewModel>(), MovieDelegate {
 
     private fun setUpObservers() {
         viewModel.isLoading.observe(viewLifecycleOwner) {
-            if(it){
-                viewModel.toastMessage.postValue("Loading")
-            }
+            binding.swipeRefresh.isRefreshing = it
         }
         viewModel.toastMessage.observe(viewLifecycleOwner) { showLongSnackBar(it) }
         viewModel.popularMoviesData.observe(viewLifecycleOwner) {
             popularAdapter.setNewData(it)
+        }
+        viewModel.upcomingMoviesData.observe(viewLifecycleOwner) {
+            upcomingAdapter.setNewData(it)
         }
     }
 }

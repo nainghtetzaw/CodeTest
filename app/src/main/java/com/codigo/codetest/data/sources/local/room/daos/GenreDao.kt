@@ -14,7 +14,7 @@ interface GenreDao {
     suspend fun insertGenres(genres : List<GenreEntity>)
 
     @Query("SELECT * FROM Genres")
-    fun getGenres() : Flow<List<GenreEntity>>
+    fun getGenres() : Flow<List<GenreEntity>?>
 
     @Query("SELECT * FROM Genres WHERE id == :id")
     fun getGenreById(id : Int) : Flow<GenreEntity>

@@ -30,7 +30,7 @@ ext {
     gsonVersion = "2.8.5"
     okhttpVersion = "3.9.1"
     rxAndroidVersion = "2.1.0"
-    retrofitVersion = "2.3.0"
+    retrofitVersion = "2.6.0"
     retrofitRxJavaVersion = "1.0.0"
     rxJavaVersion = "2.2.4"
 
